@@ -18,18 +18,20 @@ opc123/
 │
 ├── 🎨 设计工具
 ├── open-design调研报告.md      # Web + 本地 daemon，支持 16 种编码 Agent
-├── open-codesign调研报告.md    # 桌面 Electron，自带 AI 运行时
+├── open-codesign调研报告.md   # 桌面 Electron，自带 AI 运行时
 │
 ├── 💼 工作流 & 角色
-├── gstack调研报告.md           # YC CEO Garry Tan 的 23 工具虚拟工程团队
+├── gstack调研报告.md          # YC CEO Garry Tan 的 23 工具虚拟工程团队
 │
 ├── 🧠 记忆 & 知识系统
-├── gbrain调研报告.md           # 自进化第二大脑，知识图谱 + 混合搜索
+├── gbrain调研报告.md          # 自进化第二大脑，知识图谱 + 混合搜索
 │
 ├── 🛠️ Agent Skills 生态
-├── opc-skills调研报告.md       # 独立创业者 Skills 集合（12个）
-├── opchain调研报告.md          # Checkpoint 协议，跨会话开发 Pipeline
-└── dbskill调研报告.md          # dontbesilent 商业诊断工具箱（19个 Skills）
+├── opc-skills调研报告.md              # 独立创业者 Skills（12个）
+├── opchain调研报告.md                # Checkpoint 协议，跨会话开发 Pipeline
+├── dbskill调研报告.md                # dontbesilent 商业诊断工具箱（19个 Skills）
+├── pm-skills(by-phuryn)调研报告.md  # phuryn 版 PM Skills（65 Skills + 36工作流）
+└── Product-Manager-Skills(by-deanpeters)调研报告.md  # deanpeters 版 PM Skills（49 Skills）
 ```
 
 ---
@@ -62,6 +64,8 @@ opc123/
 | [opc-skills](https://github.com/ReScienceLab/opc-skills) | 独立创业者 Skills | 12 个 | Apache 2.0 |
 | [opchain](https://opchain.dev) | 开发 Pipeline + Checkpoint | 9 个阶段 | MIT |
 | [dbskill](https://github.com/dontbesilent2025/dbskill) | 商业诊断工具箱 | 19 个 | CC BY-NC 4.0 |
+| [phuryn/pm-skills](https://github.com/phuryn/pm-skills) | PM Skills 市集 | 65 个 | MIT |
+| [deanpeters/PM-Skills](https://github.com/deanpeters/Product-Manager-Skills) | PM 方法论框架 | 49 个 | CC BY-NC-SA 4.0 |
 
 ---
 
@@ -78,12 +82,15 @@ opc123/
 | 独立产品调研到设计 | opc-skills |
 | 跨会话开发全流程 | opchain |
 | 商业诊断与执行力 | dbskill |
+| 系统化产品发现流程 | phuryn/pm-skills（65 Skills，自动推荐） |
+| 学术化PM方法论学习 | deanpeters/PM-Skills（Torres/Moore/Amazon） |
 
 ### 完整 AI 开发栈
 
 ```
 产品调研    → opc-skills（requesthunt、domain-hunter）
 商业诊断    → dbskill（diagnosis、benchmark、action）
+PM流程     → phuryn/pm-skills（65 Skills，OST/JTBD）
 工作流角色  → gstack（23 工具命令）
 开发 Pipeline → opchain（Checkpoint 协议）
 知识记忆    → gbrain（知识图谱 + 混合搜索）
@@ -97,11 +104,15 @@ opc123/
 ```bash
 # opc-skills（Claude Code）
 /plugin marketplace add ReScienceLab/opc-skills
-/plugin install requesthunt@opc-skills
 
 # dbskill（Claude Code）
 /plugin marketplace add dontbesilent2025/dbskill
-/plugin install dbs@dontbesilent-skills
+
+# phuryn/pm-skills（Claude Code）
+/plugin marketplace add phuryn/pm-skills
+
+# deanpeters/PM-Skills（Claude Code）
+/plugin marketplace add deanpeters/Product-Manager-Skills
 
 # gstack（Garry Tan 的配置）
 git clone --single-branch --depth 1 https://github.com/garrytan/gstack.git ~/.claude/skills/gstack
