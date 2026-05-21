@@ -28,7 +28,8 @@ opc123/
 │
 ├── 🛠️ Agent Skills 生态
 ├── opc-skills调研报告.md       # 独立创业者 Skills 集合（12个）
-└── opchain调研报告.md          # Checkpoint 协议，跨会话开发 Pipeline
+├── opchain调研报告.md          # Checkpoint 协议，跨会话开发 Pipeline
+└── dbskill调研报告.md          # dontbesilent 商业诊断工具箱（19个 Skills）
 ```
 
 ---
@@ -56,10 +57,11 @@ opc123/
 
 ### Agent Skills 生态
 
-| 项目 | 定位 | Skills 数量 |
-|------|------|-------------|
-| [opc-skills](https://github.com/ReScienceLab/opc-skills) | 独立创业者 Skills | 12 个 |
-| [opchain](https://opchain.dev) | 开发 Pipeline + Checkpoint | 9 个阶段 |
+| 项目 | 定位 | Skills 数量 | License |
+|------|------|-------------|---------|
+| [opc-skills](https://github.com/ReScienceLab/opc-skills) | 独立创业者 Skills | 12 个 | Apache 2.0 |
+| [opchain](https://opchain.dev) | 开发 Pipeline + Checkpoint | 9 个阶段 | MIT |
+| [dbskill](https://github.com/dontbesilent2025/dbskill) | 商业诊断工具箱 | 19 个 | CC BY-NC 4.0 |
 
 ---
 
@@ -75,17 +77,17 @@ opc123/
 | 个人知识管理 | gbrain |
 | 独立产品调研到设计 | opc-skills |
 | 跨会话开发全流程 | opchain |
+| 商业诊断与执行力 | dbskill |
 
 ### 完整 AI 开发栈
 
 ```
-opc-skills（产品调研）
-    ↓
-gstack（工作流 + 角色）
-    ↓
-opchain（开发 Pipeline + Checkpoint）
-    ↓
-gbrain（知识记忆）
+产品调研    → opc-skills（requesthunt、domain-hunter）
+商业诊断    → dbskill（diagnosis、benchmark、action）
+工作流角色  → gstack（23 工具命令）
+开发 Pipeline → opchain（Checkpoint 协议）
+知识记忆    → gbrain（知识图谱 + 混合搜索）
+设计工具    → open-design / open-codesign
 ```
 
 ---
@@ -96,6 +98,10 @@ gbrain（知识记忆）
 # opc-skills（Claude Code）
 /plugin marketplace add ReScienceLab/opc-skills
 /plugin install requesthunt@opc-skills
+
+# dbskill（Claude Code）
+/plugin marketplace add dontbesilent2025/dbskill
+/plugin install dbs@dontbesilent-skills
 
 # gstack（Garry Tan 的配置）
 git clone --single-branch --depth 1 https://github.com/garrytan/gstack.git ~/.claude/skills/gstack
