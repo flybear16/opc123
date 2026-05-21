@@ -41,5 +41,5 @@
 ---
 
 - **🔗 参考**
-  - [GitHub仓库](https://github.com/flybear16/opc123)
-  - [提交Issue](https://github.com/flybear16/opc123/issues)
+  - [GitHub 仓库](https://github.com/flybear16/opc123)
+  - [提交 Issue](https://github.com/flybear16/opc123/issues)
