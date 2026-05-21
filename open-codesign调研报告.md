@@ -47,8 +47,8 @@ open-codesign 是**桌面 Electron 应用**，自带完整 Agent 运行时；ope
 ### 3.3 设计产物生成流程
 
 ```
-Prompt 输入 → Agent 规划（Todo）→ 自检 + 自我修正 →
-生成带 hover / tabs / empty states 的完整页面 →
+Prompt 输入 → Agent 规划（Todo）→ 自检 + 自我修正 → 
+生成带 hover / tabs / empty states 的完整页面 → 
 沙箱 iframe 实时预览 → 多格式导出
 ```
 
@@ -142,7 +142,7 @@ xattr -cr "/Applications/Open CoDesign.app"
 
 ### 优点
 
-- **完全本地**：Electron 应用，数据不离开设备
+- **完全本地**： Electron 应用，数据不离开设备
 - **多模型支持**：不绑定 Anthropic，任何兼容 API 均可使用
 - **一键导入**：Claude Code / Codex / ChatGPT 配置秒级完成
 - **桌面原生**：可离线运行，不依赖浏览器
@@ -180,7 +180,7 @@ open-codesign 是 open-design 的**直接上游参考**：
 
 - 不希望被任何云服务绑定的设计师/开发者
 - 想用 Claude Design 但不想付订阅费的用户
-- 需要完全本地离线生成设计稿的环境
+- 需要本地离线生成设计稿的环境（无网络要求）
 - 需要快速从 Prompt 生成可编辑 HTML/PDF 的办公场景
 
 ---
