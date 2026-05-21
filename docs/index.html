@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>opc123 - AI 开源工具 & Agent Skills 调研</title>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛠️</text></svg>">
+</head>
+<body>
+  <div id="app">加载中...</div>
+  <script>
+    window.$docsify = {
+      name: 'opc123',
+      repo: 'https://github.com/flybear16/opc123',
+      loadSidebar: true,
+      subMaxLevel: 3,
+      auto2top: true,
+      search: {
+        maxAge: 86400000,
+        paths: 'auto',
+        placeholder: '🔍 搜索',
+        noData: '😿 没有结果',
+        depth: 3,
+        hideOtherSidebarContent: false
+      },
+      pagination: {
+        previousText: '← 上一篇',
+        nextText: '下一篇 →',
+        crossChapter: true
+      },
+      copyCode: {
+        buttonText: '📋 复制',
+        errorText: '❌ 复制失败',
+        successText: '✅ 已复制'
+      },
+      toc: {
+        tocLevel: 3,
+        goToTop: true
+      },
+      formatUpdated: '{YYYY}-{MM}-{DD}',
+      plugins: [
+        function(hook, vm) {
+          hook.doneEach(function() {
+            document.querySelectorAll('.docsify-pagination-container').forEach(function(el) {
+              el.style.cssText = 'padding:20px 0;text-align:center;font-size:14px;color:#666;';
+            });
+          });
+        }
+      ]
+    }
+  </script>
+  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-pagination@2/dist/pagination.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code@2/dist/docsify-copy-code.min.js"></script>
+  <style>
+    :root {
+      --theme-color: #3f51b5;
+      --sidebar-nav-link-font-size: 14px;
+    }
+    .sidebar-nav > ul > li > a {
+      font-weight: bold;
+      font-size: 15px;
+    }
+    .sidebar-nav a {
+      color: #333;
+    }
+    .sidebar-nav a:hover {
+      color: var(--theme-color);
+    }
+    .markdown-section code {
+      background: #f6f8fa;
+      border-radius: 3px;
+      padding: 2px 5px;
+      font-size: 0.9em;
+    }
+    .docsify-pagination-container {
+      padding: 20px 0;
+      text-align: center;
+      font-size: 14px;
+    }
+    .docsify-toc {
+      position: fixed;
+      right: 20px;
+      top: 120px;
+      width: 200px;
+      font-size: 12px;
+      border-left: 2px solid #eee;
+      padding-left: 15px;
+    }
+    .docsify-toc a {
+      color: #666;
+      text-decoration: none;
+    }
+    .docsify-toc a:hover {
+      color: var(--theme-color);
+    }
+    @media (max-width: 768px) {
+      .docsify-toc { display: none; }
+    }
+  </style>
+</body>
+</html>
